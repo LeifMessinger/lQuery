@@ -1,0 +1,4 @@
+Capitalize first letter of string function
+Some sort of easy query selector
+WebGLeifs
+Separate my code from other people's code
