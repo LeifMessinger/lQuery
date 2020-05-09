@@ -13,7 +13,7 @@ function setProperties(elm, properties){
 }
 function setAttributes(elm, attributes){
 	for(let attribute in attributes){
-		elm.style.setProperty(attribute, attributes[attribute]);
+		elm.setAttribute(attribute, attributes[attribute]);
 	}
 }
 
