@@ -78,7 +78,7 @@ class ImageHandler{	//single category
 		this.assign(elm,vars);
 		Object.assign(elm,vars.variables);
 		
-		minefield.appendChild(elm);
+		div.appendChild(elm);
 		return elm;
 	}
 	add(image){
