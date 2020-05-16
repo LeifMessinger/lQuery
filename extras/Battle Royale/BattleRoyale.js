@@ -9,8 +9,8 @@ class Weapon{
 		this.attack = function(){};
 		this.aliases = ["none","0"];
 		this.killIcon = "https://upload.wikimedia.org/wikipedia/commons/2/2a/Fist.svg";
-		this.hitFeed = new KillFeed({verb:"hit",how:"with his bare hands",ico:this.killIcon});	//Assume if someone has the audacity to edit the weapon,
-		this.killFeed = new KillFeed({verb:"killed",how:"with his bare hands",ico:this.killIcon});	//they would change the KillFeeds as well.
+		this.hitFeed = new KillFeed({verb:"hit",how:"with his bare hands",killIcon:{src:this.killIcon,alt:"punched"}});	//Assume if someone has the audacity to edit the weapon,
+		this.killFeed = new KillFeed({verb:"killed",how:"with his bare hands",killIcon:{src:this.killIcon,alt:"punched"}});	//they would change the KillFeeds as well.
 		this.toString = () => name;
 		Object.assign(this,weaponStats);
 	}
@@ -36,7 +36,7 @@ class KillFeed{
 				case 1:	//to death, how
 					ans += this.attacker + " " + this.verb + " " + this.victim + " to death " + this.how;
 					break;
-				case 1:	//how, to death
+				case 2:	//how, to death
 					ans += this.attacker + " " + this.verb + " " + this.victim + " " + this.how + " to death";
 					break;
 				default:
@@ -45,10 +45,16 @@ class KillFeed{
 			ans += this.postfixStatement();
 			return ans;
 		}
+		this.gui = function(){
+			let arr = [];
+			arr.push(this.attacker);
+			if(this.killIcon) arr.push(this.killIcon);
+			if(this.wallbang) arr.push(this.wallbang);
+			if(this.headshot) arr.push(this.headshot);
+			
+			return arr;
+		}
 		Object.assign(this,info);
-	}
-	gui(){
-		return [this.attacker,this.ico,this.victim];
 	}
 }
 class Inventory{

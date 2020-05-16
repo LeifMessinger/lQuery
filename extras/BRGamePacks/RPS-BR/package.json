@@ -1,6 +1,6 @@
 {
   "name": "rps-br",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "rock paper scissors weapon pack",
   "main": "RPS-BR.js",
   "scripts": {

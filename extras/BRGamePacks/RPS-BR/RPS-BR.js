@@ -20,9 +20,9 @@ with(require('battle-royale','utf8')){
 			return null;
 		},
 		aliases:["Rock","1","r","R","ro","Ro"],
-		killIcon: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Fist.svg",
-		hitFeed: new KillFeed({verb:"crushed",how:"with a rock",ico:this.killIcon}),
-		killFeed: new KillFeed({verb:"pummeled",how:"with a rock",ico:this.killIcon,grammar:1}),
+		killIcon: {src:"https://upload.wikimedia.org/wikipedia/commons/2/2a/Fist.svg",alt:"pummeled"},
+		hitFeed: new KillFeed({verb:"crushed",how:"with a rock",killIcon:this.killIcon}),
+		killFeed: new KillFeed({verb:"pummeled",how:"with a rock",killIcon:this.killIcon,grammar:1}),
 		toString:() => name
 	});
 	var paper = new Weapon({
@@ -46,9 +46,9 @@ with(require('battle-royale','utf8')){
 			return null;
 		},
 		aliases:["Paper","2","p","P","sham","Sham"],
-		killIcon: "https://upload.wikimedia.org/wikipedia/commons/f/fe/File_font_awesome.svg",
-		hitFeed: new KillFeed({verb:"gave",how:"a paper cut",ico:this.killIcon}),
-		killFeed: new KillFeed({verb:"gave",how:"a paper cut",ico:this.killIcon,grammar:2}),
+		killIcon: {src:"https://upload.wikimedia.org/wikipedia/commons/f/fe/File_font_awesome.svg",alt:"covered"},
+		hitFeed: new KillFeed({verb:"gave",how:"a paper cut",killIcon:this.killIcon}),
+		killFeed: new KillFeed({verb:"gave",how:"a paper cut",killIcon:this.killIcon,grammar:2}),
 		toString:() => name
 	});
 	var scissors = new Weapon({
@@ -70,10 +70,10 @@ with(require('battle-royale','utf8')){
 					return this.damage;
 			}
 		},
-		aliases:["Scissors","3","s","S","bo","Bo"],
-		killIcon: "https://upload.wikimedia.org/wikipedia/commons/7/74/Scissors_icon_black.svg",
-		hitFeed: new KillFeed({verb:"cut",how:"with scissors",ico:this.killIcon}),
-		killFeed: new KillFeed({verb:"stabbed",how:"with scissors",suicide:function(victim){return victim + " ran with scissors."},ico:this.killIcon,grammar:1}),
+		aliases:["Scissors","Sissors","3","s","S","bo","Bo"],
+		killIcon: {src:"https://upload.wikimedia.org/wikipedia/commons/7/74/Scissors_icon_black.svg",alt:"cut"},
+		hitFeed: new KillFeed({verb:"cut",how:"with scissors",killIcon:this.killIcon}),
+		killFeed: new KillFeed({verb:"stabbed",how:"with scissors",suicide:function(victim){return victim + " ran with scissors."},killIcon:this.killIcon,grammar:1}),
 		toString:() => name
 	});
 	var rpsLoadout = {weapons:[rock,paper,scissors]};
