@@ -1,4 +1,4 @@
-with(require('./BattleRoyale.js','utf8')){
+with(require('battle-royale','utf8')){
 	var rock = new Weapon({
 		name:"rock",
 		ammo:Infinity,

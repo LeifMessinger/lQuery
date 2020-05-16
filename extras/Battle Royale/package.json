@@ -1,0 +1,22 @@
+{
+  "name": "battle-royale",
+  "version": "0.8.0",
+  "description": "custom players, weapons, and killfeeds",
+  "main": "BattleRoyale.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeifMessinger/lQuery.git"
+  },
+  "keywords": [
+    "Battle-Royale"
+  ],
+  "author": "Leif Messinger <leifmessinger@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeifMessinger/lQuery/issues"
+  },
+  "homepage": "https://github.com/LeifMessinger/lQuery#readme"
+}
