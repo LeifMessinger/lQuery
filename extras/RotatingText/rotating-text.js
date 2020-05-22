@@ -15,6 +15,7 @@ words.forEach(function(word) {
       word.append(span);
     }
   });
+  if(word.color) word.style.setProperty("color", word.color);
 });
 var currentWordIndex = 0;
 var maxWordIndex = words.length - 1;
