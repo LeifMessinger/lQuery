@@ -5,6 +5,7 @@ words.forEach(function(word) {
   word.textContent = "";
   letters.forEach(function(letter) {
     var span = document.createElement("span");
+	if(word.color) span.style.setProperty("color", word.color);
     if (letter == " ") {
       span.textContent = " ";
       span.className = "letter";
@@ -15,7 +16,6 @@ words.forEach(function(word) {
       word.append(span);
     }
   });
-  if(word.color) word.style.setProperty("color", word.color);
 });
 var currentWordIndex = 0;
 var maxWordIndex = words.length - 1;
