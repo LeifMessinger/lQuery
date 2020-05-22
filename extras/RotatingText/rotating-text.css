@@ -1,9 +1,4 @@
 /* Rotating Text CSS */
-.col1 { color: var(--dark) }
-.col2 { color: var(--teal) }
-.col3 { color: var(--pink) }
-.col4 { color: var(--orange) }
-
 .rotating-text {
     overflow: hidden;
 }
