@@ -1,0 +1,35 @@
+/* Rotating Text CSS */
+.col1 { color: var(--dark) }
+.col2 { color: var(--teal) }
+.col3 { color: var(--pink) }
+.col4 { color: var(--orange) }
+
+.rotating-text {
+    overflow: hidden;
+}
+
+.rotating-text h1 {
+    display: inline-flex;
+    margin: 0;
+    vertical-align: top;
+}
+.rotating-text h1 .word {
+    position: absolute;
+    display: flex;
+    opacity: 0;
+    overflow: hidden;
+    padding-bottom: 0.12em;
+}
+.rotating-text h1 .word .letter {
+    transform-origin: center center 0.8em;
+}
+.rotating-text h1 .word .letter.out {
+    transform: rotateX(90deg);
+    transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+}
+.rotating-text h1 .word .letter.in {
+    transition: 0.32s ease;
+}
+.rotating-text h1 .word .letter.behind {
+    transform: rotateX(-90deg);
+}
