@@ -1,30 +1,29 @@
-/* Rotating Text CSS */
 .rotating-text {
-    overflow: hidden;
+	overflow: hidden;
 }
 
 .rotating-text h1 {
-    display: inline-flex;
-    margin: 0;
-    vertical-align: top;
+	display: inline-flex;
+	margin: 0;
+	vertical-align: top;
 }
 .rotating-text h1 .word {
-    position: absolute;
-    display: flex;
-    opacity: 0;
-    overflow: hidden;
-    padding-bottom: 0.12em;
+	position: absolute;
+	display: flex;
+	opacity: 0;
+	overflow: hidden;
+	padding-bottom: 0.12em;
 }
 .rotating-text h1 .word .letter {
-    transform-origin: center center 0.8em;
+	transform-origin: center center 0.8em;
 }
 .rotating-text h1 .word .letter.out {
-    transform: rotateX(90deg);
-    transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+	transform: rotateX(90deg);
+	transition: 0.32s ease-in;
 }
 .rotating-text h1 .word .letter.in {
-    transition: 0.32s ease;
+	transition: 0.32s ease-out;
 }
 .rotating-text h1 .word .letter.behind {
-    transform: rotateX(-90deg);
+	transform: rotateX(-90deg);
 }
